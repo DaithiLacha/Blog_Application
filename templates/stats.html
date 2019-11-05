@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for key, value in stats.items() %}
+    <article class="media content-section">
+      <div class="media-body">
+        <h2>{{key}}</h2>
+        <h3>{{value}}</h3>
+      </div>
+    </article>
+    {% endfor %}
+{% endblock content %}
