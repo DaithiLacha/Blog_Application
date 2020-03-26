@@ -11,3 +11,6 @@ class TestDatabaseMethods(unittest.TestCase):
         create_user('Batman', 'Bruce Wayne', 'batman@gotham.com', 'IamtheNight')
         users = get_users_2()
         self.assertEqual(users['Batman'], 'Batman')
+
+if _name == '__main__':
+    unittest.__main__
