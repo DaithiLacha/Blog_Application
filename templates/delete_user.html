@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="content-section">
-        <form method="POST" action ="">
+        <form method="POST" action ="">	
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
+		    <legend>Delete User</legend>    
                 {{ form.user.label(class="form-control-label") }}
                 {% if form.user.errorsf %}
                     {{ form.user(class="form-control form-control-lg is-invalid") }}
