@@ -12,5 +12,5 @@ class TestDatabaseMethods(unittest.TestCase):
         users = get_users_2()
         self.assertEqual(users['Batman'], 'Batman')
 
-if _name == '__main__':
+if _name__S == '__main__':
     unittest.__main__
