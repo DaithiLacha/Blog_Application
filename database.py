@@ -18,9 +18,8 @@ def establish_connection():
                           'appdomain.cloud', connect=True)
 
     except ConnectionError:
-        print('Error Connecting to localhost. ' +
-              'Will attempt connection to cloud.')
-        
+        print('Error Connecting to database.')
+
     return client
 
 
@@ -101,6 +100,8 @@ def get_posts():
         for post in all_posts:
             posts.append(post)
 
+    # print(posts)
+    # print(posts[0]['title'])
     client.disconnect()
     return posts
 
@@ -116,7 +117,7 @@ def get_users():
     for view in view_list.result:
         users[view.get('id')] = view.get('value')
 
-    print(users)
+    # print(users)
     client.disconnect()
     return users
 
@@ -130,8 +131,8 @@ def get_users_2():
     users = {}
 
     for view in view_list.result:
-        users[view.get('id')] = view.get('value')
+        users[view.get('id')] = view.get('id')
 
-    print(users)
+    # print(users)
     client.disconnect()
     return users
