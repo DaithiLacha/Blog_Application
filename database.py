@@ -8,10 +8,6 @@ import base64
 
 def establish_connection():
     try:
-        #client = CouchDB(base64.b64decode(b'YWRtaW4='),
-        #                 base64.b64decode(b'NDc3VGgzNW00NzdUaDFuZzU='),
-        #                 url='http://127.0.0.1:5984',
-        #                 connect=True)
         client = Cloudant('d07e4fa4-6cda-4497-ad7b-d88d85e87d09-bluemix',
                           'ac3c68b7c1048ced936c802d6d6741a1625bac6ce4ef' +
                           'f8993cd22397129eaeee',
