@@ -2,7 +2,7 @@ pipeline {
     agent any
         stages {
             stage('Clone Repository') {
-                /* Cloning the repo to workspace
+                /* Cloning the repo to workspace */
                 steps {
                     checkout scm
                 }
